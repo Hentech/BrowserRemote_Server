@@ -1,0 +1,10 @@
+{
+  "name": "BrowserRemote",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express.io": "~1.1.13"
+  }
+}
