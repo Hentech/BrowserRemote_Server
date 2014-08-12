@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remote</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/remote.css">
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="address_bar">
+			<input id="address_bar-input" placeholder="Search or type in a URL...">
+		</div>
+		<iframe id="content" src="http://henrytroutman.com">
+			
+		</iframe>
+		<script type="text/javascript">
+			function sizeContent(){
+				var body_height = parseInt($('body').css('height')),
+					addressBar_height = parseInt($('#address_bar').css('height'));
+				$('#content').css('height', (body_height - addressBar_height) + "px");	
+				$('#content').css('margin-top', addressBar_height + "px");	
+			}
+			sizeContent();
+			$(document).ready(sizeContent);
+			$(window).resize(sizeContent);
+		</script>
+		<script type="text/javascript" src="javascripts/remote.js"></script>
+	</div>
+
+</body>
+</html>

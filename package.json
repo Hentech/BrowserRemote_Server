@@ -5,6 +5,7 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express.io": "~1.1.13"
+    "express.io": "~1.1.13",
+    "shortid": "~2.0.1"
   }
 }
