@@ -10,7 +10,7 @@
 	<input type="text" id="address_bar">
 	<button id="submit">Submit</button>
 	<script type="text/javascript">
-		var socket = io.connect("http://172.16.5.162:3000");
+		var socket = io.connect();
 		$('#submit').click(function() {
 			var url = $('#address_bar').val();
 			if (url.indexOf('http://') != 0) url = "http://" + url;
