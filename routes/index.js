@@ -31,9 +31,9 @@ module.exports = function(io){
 			session_id = undefined;
 		});
 		// SOON TO BE set_location
-		socket.on('pageLoad',function(location){
+		socket.on('server-set_location',function(location){
 			console.log("test:" + session_id);
-			socket.to(session_id).emit('server-set_location', location);
+			socket.to(session_id).emit('server-incoming_location', location);
 		});
 	});
 };
