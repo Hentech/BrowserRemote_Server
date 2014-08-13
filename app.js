@@ -1,6 +1,14 @@
+///////////////////////////////////////////////
+// Browser Remote (the server)               //
+// By Henry Troutman (henguin1001@gmail.com) //
+///////////////////////////////////////////////
+
 var app = require('http').createServer(function() {
 
-});
-var io = require('socket.io')(app);
+	}),
+	io = require('socket.io')(app),
+	config = require('./config.json');
+
 require('./routes')(io);
-app.listen(80);
+
+app.listen(config.port_number);
